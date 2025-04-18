@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Sender</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>📧 Send Email with Attachment</h2>
+        <form action="/send_email" method="POST" enctype="multipart/form-data">
+            <label>Sender Email</label>
+            <input type="email" name="senderEmail" required>
+
+            <label>Receiver Emails <small>(comma separated)</small></label>
+            <input type="text" name="receiverEmails" required>
+
+            <label>Subject</label>
+            <input type="text" name="subject" required>
+
+            <label>Body</label>
+            <textarea name="body" rows="6" required></textarea>
+
+            <label>PDF Attachment</label>
+            <input type="file" name="pdfAttachment" accept="application/pdf">
+
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+</body>
+</html>
