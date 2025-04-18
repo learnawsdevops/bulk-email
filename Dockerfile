@@ -9,7 +9,6 @@ WORKDIR /app
 
 # Install dependencies
 
-RUN rm -rf firstapp
 COPY . /app
 # Expose port
 EXPOSE 5000
