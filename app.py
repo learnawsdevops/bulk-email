@@ -65,4 +65,4 @@ def send_email(sender_email, receiver_emails, subject, body, pdf_filename=None):
         server.sendmail(sender_email, receiver_emails, msg.as_string())
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
